@@ -1,0 +1,19 @@
+server:
+  port: 82
+spring:
+  r2dbc:
+    url: r2dbc:mariadb://root:root@127.0.0.1:3306/test
+    pool:
+      initial-size: 64
+      max-size: 64
+  redis:
+    client-type: lettuce
+    database: 12
+    host: 127.0.0.1
+    port: 6379
+    lettuce:
+      pool:
+        min-idle: 8
+logging:
+  level:
+    org: info

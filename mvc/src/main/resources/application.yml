@@ -1,0 +1,21 @@
+server:
+  port: 81
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/test
+    dbcp2:
+      initial-size: 64
+      max-total: 64
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    client-type: lettuce
+    database: 12
+    lettuce:
+      pool:
+        min-idle: 8
